@@ -419,6 +419,721 @@ export const QUESTIONS: MockQuestion[] = [
       "Kontrollera vägmärken och markeringar på platsen.",
     terms: ["hållplats", "parkering", "stannande"],
   }),
+
+  // ===================== EXPANDED BANK (Delprov 1) =====================
+  q({
+    delprov: 1,
+    area: "safety",
+    sv: "Vad är syftet med 'tresekundersregeln' i trafik?",
+    fr: "Quel est le but de la « règle des trois secondes » ?",
+    options: [
+      "Att hålla ett tillräckligt avstånd till fordonet framför",
+      "Att bestämma hur länge man får stå stilla",
+      "Att mäta hur snabbt man får accelerera",
+      "Att ange hur ofta man ska byta körfält",
+    ],
+    correct: 0,
+    explain:
+      "Tresekundersregeln hjälper dig hålla ett säkert avstånd: välj en fast " +
+      "punkt och kontrollera att minst tre sekunder passerar innan du når den. " +
+      "Öka marginalen vid halt väglag.",
+    terms: ["avstånd", "säkerhetsmarginal"],
+  }),
+  q({
+    delprov: 1,
+    area: "safety",
+    type: "scenario",
+    sv: "Ett litet barn ska åka med i taxin. Vad gäller för skydd?",
+    fr: "Un jeune enfant monte dans le taxi. Que prévoit la règle de protection ?",
+    options: [
+      "Barn ska normalt använda en skyddsanordning anpassad efter längd och ålder",
+      "Barn behöver aldrig särskilt skydd i taxi",
+      "Det räcker att en vuxen håller barnet i knät",
+      "Barn får alltid sitta i framsätet utan skydd",
+    ],
+    correct: 0,
+    explain:
+      "Barn ska som regel använda en skyddsanordning (bilbarnstol/bälteskudde) " +
+      "anpassad efter längd och ålder. Vissa undantag finns för tillfälliga " +
+      "taxiresor – barnets säkerhet går först, kontrollera aktuella regler.",
+    terms: ["bilbarnstol", "skyddsanordning", "barn"],
+  }),
+  q({
+    delprov: 1,
+    area: "safety",
+    sv: "Vad gäller för att hålla mobiltelefon i handen under körning?",
+    fr: "Que prévoit la règle pour tenir un téléphone en main en conduisant ?",
+    options: [
+      "Det är inte tillåtet att hålla mobilen i handen under körning",
+      "Det är alltid tillåtet att hålla mobilen",
+      "Det är endast tillåtet i tätort",
+      "Det är endast förbjudet på motorväg",
+    ],
+    correct: 0,
+    explain:
+      "Du får inte hålla mobiltelefon eller annan kommunikationsutrustning i " +
+      "handen under körning. Använd handsfree och hantera tekniken så att den " +
+      "inte stör körningen.",
+    terms: ["mobiltelefon", "handsfree"],
+  }),
+  q({
+    delprov: 1,
+    area: "vehicle_knowledge",
+    sv: "När ska vinterdäck normalt användas i Sverige?",
+    fr: "Quand les pneus hiver doivent-ils normalement être utilisés en Suède ?",
+    options: [
+      "Vid vinterväglag, normalt 1 december–31 mars",
+      "Aldrig, sommardäck räcker hela året",
+      "Endast i juli",
+      "Endast på motorväg",
+    ],
+    correct: 0,
+    explain:
+      "Vid vinterväglag ska vinterdäck användas, normalt mellan 1 december och " +
+      "31 mars. Vinterdäck ska ha minst 3 mm mönsterdjup vid vinterväglag.",
+    terms: ["vinterdäck", "mönsterdjup", "vinterväglag"],
+  }),
+  q({
+    delprov: 1,
+    area: "vehicle_knowledge",
+    type: "scenario",
+    sv: "Under körning tänds en gul/orange varningslampa för motorn. Vad gör du?",
+    fr: "Un témoin moteur jaune/orange s'allume en roulant. Que faites-vous ?",
+    options: [
+      "Var uppmärksam, anpassa körningen och låt kontrollera fordonet snarast",
+      "Ignorerar den helt, den släcks alltid själv",
+      "Ökar hastigheten för att 'rensa' motorn",
+      "Stänger av all belysning",
+    ],
+    correct: 0,
+    explain:
+      "En gul/orange lampa signalerar ett fel som bör kontrolleras snart. En " +
+      "röd lampa är allvarligare och kan kräva att du stannar. Följ " +
+      "instruktionsboken.",
+    terms: ["varningslampa", "instruktionsbok"],
+  }),
+  q({
+    delprov: 1,
+    area: "vehicle_knowledge",
+    sv: "Vad gör ett ABS-bromssystem?",
+    fr: "À quoi sert le système de freinage ABS ?",
+    options: [
+      "Förhindrar att hjulen låser sig vid kraftig inbromsning så att du kan styra",
+      "Gör att bilen alltid stannar på halva sträckan",
+      "Ersätter behovet av att hålla avstånd",
+      "Stänger av motorn vid inbromsning",
+    ],
+    correct: 0,
+    explain:
+      "ABS hindrar hjulen från att låsa sig vid hård inbromsning, så att du " +
+      "behåller styrförmågan. Det förkortar inte alltid bromssträckan, särskilt " +
+      "inte på lös is eller grus.",
+    terms: ["ABS", "bromssträcka", "styrförmåga"],
+  }),
+  q({
+    delprov: 1,
+    area: "eco_driving",
+    sv: "Hur påverkar en motorvärmare miljö och ekonomi vid kallstart?",
+    fr: "Comment un chauffe-moteur agit-il sur l'environnement et l'économie au démarrage à froid ?",
+    options: [
+      "Den minskar bränsleförbrukning, slitage och utsläpp vid kallstart",
+      "Den ökar alltid förbrukningen",
+      "Den har ingen effekt",
+      "Den behövs bara på sommaren",
+    ],
+    correct: 0,
+    explain:
+      "En motorvärmare ger en varmare motor vid start, vilket minskar " +
+      "bränsleförbrukning, slitage och utsläpp – särskilt vid kyla.",
+    terms: ["motorvärmare", "kallstart", "utsläpp"],
+  }),
+  q({
+    delprov: 1,
+    area: "eco_driving",
+    sv: "Hur påverkar för lågt däcktryck körningen?",
+    fr: "Quel est l'effet d'une pression de pneus trop basse ?",
+    options: [
+      "Ökad bränsleförbrukning och sämre köregenskaper",
+      "Lägre förbrukning och bättre grepp",
+      "Ingen påverkan alls",
+      "Bara påverkan på ljudet",
+    ],
+    correct: 0,
+    explain:
+      "För lågt däcktryck ökar rullmotståndet och därmed bränsleförbrukningen, " +
+      "ger ökat slitage och kan försämra köregenskaperna.",
+    terms: ["däcktryck", "rullmotstånd"],
+  }),
+  q({
+    delprov: 1,
+    area: "eco_driving",
+    sv: "Vad gäller generellt för onödig tomgångskörning vid stillastående?",
+    fr: "Que prévoit en général la règle sur le ralenti inutile à l'arrêt ?",
+    options: [
+      "Den bör undvikas; många kommuner begränsar tomgång till en kort tid",
+      "Den är alltid tillåten hur länge som helst",
+      "Den minskar utsläppen",
+      "Den krävs alltid innan körning",
+    ],
+    correct: 0,
+    explain:
+      "Onödig tomgång slösar bränsle och ger utsläpp. I många kommuner är " +
+      "tomgångskörning begränsad (ofta omkring en minut) – kontrollera lokala " +
+      "regler.",
+    terms: ["tomgång", "miljö"],
+  }),
+  q({
+    delprov: 1,
+    area: "navigation",
+    type: "map",
+    sv: "Du kör norrut och svänger höger. Åt vilket väderstreck kör du nu?",
+    fr: "Vous roulez vers le nord et tournez à droite. Vers quel point cardinal allez-vous ?",
+    options: ["Öster", "Väster", "Söder", "Norr"],
+    correct: 0,
+    explain: "Med norr framåt är höger = öster. En högersväng från nordlig riktning leder österut.",
+    terms: ["väderstreck", "öster"],
+  }),
+  q({
+    delprov: 1,
+    area: "navigation",
+    type: "map",
+    sv: "På en karta i skala 1:10 000 motsvarar 1 cm på kartan:",
+    fr: "Sur une carte à l'échelle 1:10 000, 1 cm sur la carte correspond à :",
+    options: [
+      "100 meter i verkligheten",
+      "10 meter i verkligheten",
+      "1 kilometer i verkligheten",
+      "10 kilometer i verkligheten",
+    ],
+    correct: 0,
+    explain: "1:10 000 betyder att 1 cm på kartan = 10 000 cm = 100 m i verkligheten.",
+    terms: ["skala", "karta"],
+  }),
+  q({
+    delprov: 1,
+    area: "navigation",
+    type: "scenario",
+    sv: "Trafikinformation visar en olycka på din planerade väg. Vad är lämpligast?",
+    fr: "L'info-trafic signale un accident sur votre itinéraire. Quelle est la meilleure réaction ?",
+    options: [
+      "Välj en alternativ väg för att undvika köer och förseningar",
+      "Kör ändå rakt in i kön",
+      "Stanna och vänta i timmar",
+      "Strunta i informationen",
+    ],
+    correct: 0,
+    explain:
+      "Effektivt vägval innebär att använda aktuell trafikinformation och välja " +
+      "en alternativ rutt när det behövs, för kundens och tidens skull.",
+    terms: ["trafikinformation", "alternativ väg"],
+  }),
+  q({
+    delprov: 1,
+    area: "customer_service",
+    type: "scenario",
+    sv: "En passagerare berättar känslig information under resan. Hur bör du hantera det?",
+    fr: "Un passager confie une information sensible. Comment devez-vous la traiter ?",
+    options: [
+      "Behandla den med diskretion och respektera passagerarens integritet",
+      "Berätta vidare till nästa kund",
+      "Lägga ut det på sociala medier",
+      "Skämta om det med kollegor",
+    ],
+    correct: 0,
+    explain: "Ett professionellt bemötande innebär diskretion och respekt för passagerarens integritet.",
+    terms: ["integritet", "diskretion"],
+  }),
+  q({
+    delprov: 1,
+    area: "customer_service",
+    type: "scenario",
+    sv: "Du och kunden talar inte samma språk. Vad är ett bra första steg?",
+    fr: "Vous et le client ne parlez pas la même langue. Quelle est une bonne première étape ?",
+    options: [
+      "Använda adress, karta eller appen för att bekräfta destinationen",
+      "Höja rösten tills kunden förstår",
+      "Köra iväg utan att veta vart",
+      "Be kunden gå ur",
+    ],
+    correct: 0,
+    explain:
+      "Bekräfta destinationen visuellt med adress, karta eller GPS. Tydlighet " +
+      "och tålamod ger ett gott bemötande.",
+    terms: ["kommunikation", "adress"],
+  }),
+  q({
+    delprov: 1,
+    area: "illness_disability",
+    type: "scenario",
+    sv: "En synskadad passagerare har en ledarhund. Vad gäller?",
+    fr: "Un passager malvoyant a un chien-guide. Que prévoit la règle ?",
+    options: [
+      "Ledarhunden får normalt följa med i taxin",
+      "Hundar är aldrig tillåtna i taxi",
+      "Endast om kunden betalar extra för hunden",
+      "Endast om hunden åker i bagageutrymmet",
+    ],
+    correct: 0,
+    explain:
+      "En ledar-/assistanshund får normalt följa med. Underlätta för " +
+      "passageraren; en ledarhund nekas inte på grund av t.ex. pälsallergi.",
+    terms: ["ledarhund", "assistanshund", "tillgänglighet"],
+  }),
+  q({
+    delprov: 1,
+    area: "illness_disability",
+    type: "scenario",
+    sv: "En passagerare får ett krampanfall under resan. Vad är lämpligast?",
+    fr: "Un passager fait une crise convulsive pendant le trajet. Quelle est la bonne attitude ?",
+    options: [
+      "Stanna säkert, skydda personen utan att hålla fast hårt och larma 112 vid behov",
+      "Fortsätta köra fort och ignorera",
+      "Ge personen vatten direkt i munnen",
+      "Lämna personen ensam vid vägkanten",
+    ],
+    correct: 0,
+    explain:
+      "Stanna på en säker plats, skydda personen från skador utan att hålla " +
+      "fast hårt, och larma 112 om anfallet är långvarigt eller upprepas. " +
+      "Stoppa aldrig något i munnen.",
+    terms: ["krampanfall", "112", "första hjälpen"],
+  }),
+  q({
+    delprov: 1,
+    area: "illness_disability",
+    type: "scenario",
+    sv: "En äldre passagerare med rollator behöver hjälp in i bilen. Vad gör du?",
+    fr: "Un passager âgé avec déambulateur a besoin d'aide pour monter. Que faites-vous ?",
+    options: [
+      "Frågar hur du kan hjälpa, ger tid och stuvar rollatorn säkert",
+      "Stressar personen att skynda sig",
+      "Kör iväg utan rollatorn",
+      "Vägrar att hjälpa till",
+    ],
+    correct: 0,
+    explain:
+      "Ge tid, fråga hur du kan hjälpa till och säkra hjälpmedlet i bilen. " +
+      "Tålamod och respekt är centralt i bemötandet.",
+    terms: ["rollator", "hjälpmedel", "bemötande"],
+  }),
+  q({
+    delprov: 1,
+    area: "work_environment",
+    type: "scenario",
+    sv: "Du känner dig hotad av en passagerare. Vad är lämpligast ur arbetsmiljösynpunkt?",
+    fr: "Vous vous sentez menacé par un passager. Quelle est la bonne réaction (santé au travail) ?",
+    options: [
+      "Prioritera din säkerhet, sök en trygg plats och larma vid behov",
+      "Provocera tillbaka",
+      "Köra ännu fortare",
+      "Strunta i hotet",
+    ],
+    correct: 0,
+    explain:
+      "Din säkerhet går först. Försök lugna situationen, kör mot en trygg och " +
+      "befolkad plats och larma 112 vid behov. Många bilar har överfallslarm.",
+    terms: ["hot", "överfallslarm", "arbetsmiljö"],
+  }),
+  q({
+    delprov: 1,
+    area: "work_environment",
+    sv: "Varför är raster viktiga under långa arbetspass?",
+    fr: "Pourquoi les pauses sont-elles importantes lors de longues journées ?",
+    options: [
+      "De minskar trötthet och bibehåller uppmärksamhet och säkerhet",
+      "De ökar olycksrisken",
+      "De är förbjudna i yrkestrafik",
+      "De saknar betydelse",
+    ],
+    correct: 0,
+    explain:
+      "Regelbundna raster motverkar trötthet och bibehåller koncentration, " +
+      "vilket är avgörande för trafiksäkerheten.",
+    terms: ["rast", "trötthet", "arbetsmiljö"],
+  }),
+  q({
+    delprov: 1,
+    area: "work_environment",
+    sv: "Hur lyfter du tunga väskor på ett ergonomiskt sätt?",
+    fr: "Comment soulever des bagages lourds de façon ergonomique ?",
+    options: [
+      "Böj i knäna, håll ryggen rak och bördan nära kroppen",
+      "Böj ryggen och håll bördan långt ut",
+      "Lyft snabbt med raka ben",
+      "Vrid kroppen samtidigt som du lyfter",
+    ],
+    correct: 0,
+    explain:
+      "Lyft med benen, rak rygg och bördan nära kroppen för att skydda ryggen " +
+      "mot belastningsskador.",
+    terms: ["lyftteknik", "ergonomi", "belastning"],
+  }),
+  q({
+    delprov: 1,
+    area: "risk_judgment",
+    sv: "Var är omkörning särskilt riskfylld och ofta olämplig?",
+    fr: "Où le dépassement est-il particulièrement risqué et souvent inapproprié ?",
+    options: [
+      "Strax före kurvor, backkrön och korsningar med skymd sikt",
+      "På långa raksträckor med fri sikt",
+      "Där det finns ett särskilt omkörningsfält",
+      "När du har god sikt och marginal",
+    ],
+    correct: 0,
+    explain:
+      "Omkörning kräver fri sikt och tillräcklig marginal. Vid backkrön, kurvor " +
+      "och korsningar är sikten ofta skymd – avstå.",
+    terms: ["omkörning", "sikt", "risk"],
+  }),
+  q({
+    delprov: 1,
+    area: "risk_judgment",
+    sv: "Hur anpassar du körningen vid mörkerkörning på landsväg?",
+    fr: "Comment adapter votre conduite de nuit sur route de campagne ?",
+    options: [
+      "Anpassa hastigheten så att du kan stanna inom den sträcka du ser",
+      "Kör alltid med helljus mot mötande",
+      "Öka hastigheten eftersom det är mindre trafik",
+      "Släck lyset för att vänja ögonen",
+    ],
+    correct: 0,
+    explain:
+      "Kör inte fortare än att du kan stanna inom den belysta sträckan. Växla " +
+      "till halvljus vid möte och var uppmärksam på vilt.",
+    terms: ["mörkerkörning", "helljus", "vilt"],
+  }),
+  q({
+    delprov: 1,
+    area: "risk_judgment",
+    type: "scenario",
+    sv: "Ett rådjur springer ut på vägen precis framför dig. Vad är oftast säkrast?",
+    fr: "Un chevreuil surgit juste devant vous. Quelle réaction est souvent la plus sûre ?",
+    options: [
+      "Bromsa kraftigt och försök behålla kontrollen i ditt körfält",
+      "Tvärväja in i mötande trafik",
+      "Gasa för att hinna förbi",
+      "Blunda och hoppas",
+    ],
+    correct: 0,
+    explain:
+      "Vid viltrisk: bromsa hårt och håll bilen i körfältet snarare än att " +
+      "tvärväja, vilket kan leda till frontalkrock eller dikeskörning. Anmäl " +
+      "påkört vilt till polisen.",
+    terms: ["vilt", "väjning", "kontroll"],
+  }),
+
+  // ===================== EXPANDED BANK (Delprov 2) =====================
+  q({
+    delprov: 2,
+    area: "taxi_legislation",
+    sv: "Vad krävs för att bedriva taxiverksamhet (för företaget)?",
+    fr: "Que faut-il pour exploiter une activité de taxi (l'entreprise) ?",
+    options: [
+      "Taxitrafiktillstånd",
+      "Endast en vanlig firmaregistrering",
+      "Endast förarens körkort",
+      "Inget tillstånd alls",
+    ],
+    correct: 0,
+    explain:
+      "För att bedriva yrkesmässig taxitrafik krävs taxitrafiktillstånd för " +
+      "verksamheten, utöver att föraren har taxiförarlegitimation.",
+    terms: ["taxitrafiktillstånd", "yrkesmässig trafik"],
+  }),
+  q({
+    delprov: 2,
+    area: "taxi_legislation",
+    sv: "Vad signalerar en tänd taxiskylt (taklykta) oftast?",
+    fr: "Que signale généralement une enseigne lumineuse de taxi allumée ?",
+    options: [
+      "Att taxin är ledig",
+      "Att taxin är upptagen",
+      "Att bilen är trasig",
+      "Att föraren har rast",
+    ],
+    correct: 0,
+    explain:
+      "En tänd taklykta indikerar normalt att taxin är ledig och kan anlitas. " +
+      "(Detaljer kan variera mellan företag och utrustning.)",
+    terms: ["taklykta", "ledig"],
+  }),
+  q({
+    delprov: 2,
+    area: "taxi_legislation",
+    sv: "Vad gäller för särskild prisinformation vid högre taxipriser?",
+    fr: "Que prévoit la règle d'information de prix pour les tarifs élevés ?",
+    options: [
+      "När jämförpriset överstiger en viss nivå ska prisinformation visas tydligt för kunden",
+      "Priser är alltid hemliga",
+      "Prisinformation krävs endast för företagskunder",
+      "Prisinformation behöver bara ges efter resan",
+    ],
+    correct: 0,
+    explain:
+      "Det finns krav på tydlig prisinformation; bl.a. ska jämförpris visas, " +
+      "och särskild prisinformation krävs när priset överstiger en viss nivå. " +
+      "Kontrollera aktuella gränsvärden hos myndigheten.",
+    terms: ["jämförpris", "prisinformation"],
+  }),
+  q({
+    delprov: 2,
+    area: "taxi_legislation",
+    sv: "Vilken utrustning ska normalt registrera uppgifter om taxiresan?",
+    fr: "Quel équipement doit normalement enregistrer les données de la course ?",
+    options: [
+      "En godkänd taxameter",
+      "Endast förarens mobiltelefon",
+      "Ingen särskild utrustning",
+      "En vanlig parkeringsautomat",
+    ],
+    correct: 0,
+    explain:
+      "Taxifordon ska som regel ha en godkänd taxameter (i vissa fall annan " +
+      "särskild utrustning) som registrerar uppgifter om resan och underlag för " +
+      "kvitto.",
+    terms: ["taxameter", "kvitto"],
+  }),
+  q({
+    delprov: 2,
+    area: "taxi_legislation",
+    sv: "Vad kan hända med taxiförarlegitimationen vid allvarlig brottslighet eller olämplighet?",
+    fr: "Que peut-il arriver à la légitimation en cas d'infraction grave ou d'inaptitude ?",
+    options: [
+      "Den kan återkallas av Transportstyrelsen",
+      "Ingenting, den gäller alltid livet ut",
+      "Den blir automatiskt dubbelt så lång",
+      "Den övergår till polisen",
+    ],
+    correct: 0,
+    explain:
+      "Legitimationen bygger på lämplighet (laglydnad m.m.). Vid allvarliga " +
+      "brott eller olämplighet kan Transportstyrelsen återkalla den.",
+    terms: ["återkallelse", "lämplighet", "Transportstyrelsen"],
+  }),
+  q({
+    delprov: 2,
+    area: "taxi_legislation",
+    sv: "Hur ska taxiförarlegitimationen normalt vara tillgänglig under arbete?",
+    fr: "Comment la légitimation doit-elle normalement être disponible au travail ?",
+    options: [
+      "Föraren ska ha den med sig och den ska normalt vara synlig i fordonet",
+      "Inlåst i bagageutrymmet",
+      "Hemma hos föraren",
+      "Den får inte visas alls",
+    ],
+    correct: 0,
+    explain:
+      "Föraren ska ha med sig legitimationen, och den ska normalt vara placerad " +
+      "så att passageraren kan se den (förartavla/ID).",
+    terms: ["förartavla", "legitimation"],
+  }),
+  q({
+    delprov: 2,
+    area: "traffic_legislation",
+    sv: "Var går gränsen för rattfylleri (alkohol) i Sverige?",
+    fr: "Quel est le seuil de l'alcool au volant (rattfylleri) en Suède ?",
+    options: [
+      "0,2 promille i blodet",
+      "0,5 promille i blodet",
+      "0,8 promille i blodet",
+      "1,0 promille i blodet",
+    ],
+    correct: 0,
+    explain:
+      "Gränsen för rattfylleri i Sverige är 0,2 promille. Vid 1,0 promille " +
+      "eller mer räknas det som grovt rattfylleri. Som yrkesförare ska du aldrig " +
+      "köra alkoholpåverkad.",
+    terms: ["rattfylleri", "promille"],
+  }),
+  q({
+    delprov: 2,
+    area: "traffic_legislation",
+    sv: "Vilken är den generella högsta hastigheten inom tättbebyggt område om inget annat anges?",
+    fr: "Quelle est la vitesse maximale générale en agglomération sauf indication contraire ?",
+    options: ["50 km/h", "30 km/h", "70 km/h", "90 km/h"],
+    correct: 0,
+    explain:
+      "Inom tättbebyggt område är grundregeln 50 km/h om inget annat anges. " +
+      "Lokalt förekommer ofta 30 eller 40 km/h, t.ex. nära skolor.",
+    terms: ["tättbebyggt område", "hastighet"],
+  }),
+  q({
+    delprov: 2,
+    area: "traffic_legislation",
+    sv: "Vad innebär högerregeln i en korsning utan skyltar eller signaler?",
+    fr: "Que signifie la priorité à droite à une intersection sans panneaux ?",
+    options: [
+      "Du har väjningsplikt mot fordon som kommer från höger",
+      "Du har alltid företräde",
+      "Den som kör snabbast har företräde",
+      "Vänstertrafik gäller",
+    ],
+    correct: 0,
+    explain:
+      "I korsningar utan reglering gäller högerregeln: du ska lämna företräde " +
+      "åt fordon som närmar sig från höger.",
+    terms: ["högerregeln", "väjningsplikt"],
+  }),
+  q({
+    delprov: 2,
+    area: "traffic_legislation",
+    sv: "Hur nära en korsning får du normalt inte stanna eller parkera?",
+    fr: "À quelle distance d'une intersection est-il normalement interdit de s'arrêter/stationner ?",
+    options: [
+      "Inom 10 meter från korsande körbanas närmaste kant",
+      "Inom 1 meter",
+      "Inom 3 meter",
+      "Det finns ingen sådan regel",
+    ],
+    correct: 0,
+    explain:
+      "Du får inte stanna eller parkera inom 10 meter före eller efter en " +
+      "korsning, räknat från den korsande körbanans närmaste kant.",
+    terms: ["korsning", "parkering", "10 meter"],
+  }),
+  q({
+    delprov: 2,
+    area: "traffic_legislation",
+    type: "scenario",
+    sv: "Ett utryckningsfordon med påslagna larm närmar sig bakifrån. Vad gör du?",
+    fr: "Un véhicule d'urgence avec sirène approche par derrière. Que faites-vous ?",
+    options: [
+      "Lämna fri väg, kör åt sidan och stanna vid behov på ett säkert sätt",
+      "Ökar farten för att hålla undan",
+      "Tvärbromsar mitt i körfältet",
+      "Ignorerar fordonet",
+    ],
+    correct: 0,
+    explain:
+      "Du ska lämna fri väg åt utryckningsfordon. Kör lugnt åt sidan, blockera " +
+      "inte korsningar och stanna vid behov utan att skapa fara.",
+    terms: ["utryckningsfordon", "fri väg"],
+  }),
+  q({
+    delprov: 2,
+    area: "traffic_legislation",
+    sv: "Vad gäller vid omkörning av en cyklist?",
+    fr: "Que prévoit la règle lors du dépassement d'un cycliste ?",
+    options: [
+      "Håll ett betryggande sidoavstånd och anpassa hastigheten",
+      "Kör så nära som möjligt för att spara tid",
+      "Tuta och tvinga cyklisten åt sidan",
+      "Omkörning av cyklister är förbjuden",
+    ],
+    correct: 0,
+    explain:
+      "Vid omkörning av cyklister ska du hålla ett betryggande avstånd i sidled " +
+      "och anpassa farten, eftersom cyklister är oskyddade trafikanter.",
+    terms: ["omkörning", "cyklist", "sidoavstånd"],
+  }),
+  q({
+    delprov: 2,
+    area: "road_signs",
+    type: "sign",
+    sv: "Ett runt märke med röd ram och siffran 50 anger:",
+    fr: "Un panneau rond à bordure rouge avec le chiffre 50 indique :",
+    options: [
+      "Förbud mot högre hastighet än 50 km/h",
+      "Rekommenderad hastighet 50 km/h",
+      "Minsta hastighet 50 km/h",
+      "Avstånd 50 meter till en fara",
+    ],
+    correct: 0,
+    explain:
+      "Det är förbudsmärket 'hastighetsbegränsning'. Du får inte köra fortare " +
+      "än angivet värde, här 50 km/h.",
+    terms: ["hastighetsbegränsning", "förbudsmärke"],
+  }),
+  q({
+    delprov: 2,
+    area: "road_signs",
+    type: "sign",
+    sv: "Ett hastighetsmärke med grå siffra och ett snedstreck över betyder:",
+    fr: "Un panneau de vitesse barré d'un trait oblique signifie :",
+    options: [
+      "Tidigare hastighetsbegränsning upphör",
+      "Hastigheten fördubblas",
+      "Stopp omedelbart",
+      "Parkering förbjuden",
+    ],
+    correct: 0,
+    explain:
+      "Märket anger att en tidigare hastighetsbegränsning upphör. Därefter " +
+      "gäller bashastigheten för vägtypen tills annat anges.",
+    terms: ["hastighetsbegränsning upphör", "bashastighet"],
+  }),
+  q({
+    delprov: 2,
+    area: "road_signs",
+    type: "sign",
+    sv: "Ett runt märke med två bilar sida vid sida (den ena röd) anger:",
+    fr: "Un panneau rond avec deux voitures côte à côte (l'une en rouge) indique :",
+    options: [
+      "Förbud mot omkörning med motordrivet fordon",
+      "Påbjuden omkörning",
+      "Mötesplats",
+      "Parkering för två bilar",
+    ],
+    correct: 0,
+    explain:
+      "Det är förbudsmärket 'förbud mot omkörning'. Du får inte köra om andra " +
+      "motordrivna fordon på sträckan.",
+    terms: ["omkörningsförbud", "förbudsmärke"],
+  }),
+  q({
+    delprov: 2,
+    area: "road_signs",
+    type: "sign",
+    sv: "Ett fyrkantigt blått märke med en vit bokstav 'P' anger:",
+    fr: "Un panneau carré bleu avec un « P » blanc indique :",
+    options: [
+      "Tillåten parkering (parkeringsplats)",
+      "Parkering förbjuden",
+      "Polisstation",
+      "Påbjuden körriktning",
+    ],
+    correct: 0,
+    explain:
+      "Blå fyrkantiga märken är anvisnings-/upplysningsmärken. 'P' anger en " +
+      "parkeringsplats; tilläggstavlor kan ange villkor.",
+    terms: ["parkering", "anvisningsmärke", "tilläggstavla"],
+  }),
+  q({
+    delprov: 2,
+    area: "road_signs",
+    type: "scenario",
+    sv: "Vilket beteende krävs i ett gångfartsområde?",
+    fr: "Quel comportement est exigé dans une zone de rencontre (gångfartsområde) ?",
+    options: [
+      "Kör i gångfart och lämna företräde åt gående",
+      "Kör som vanligt i 50 km/h",
+      "Gående är förbjudna",
+      "Omkörning är obligatorisk",
+    ],
+    correct: 0,
+    explain:
+      "I ett gångfartsområde får du köra högst i gångfart och måste lämna " +
+      "företräde åt gående. Parkering får endast ske på markerade platser.",
+    terms: ["gångfartsområde", "gångfart", "företräde"],
+  }),
+  q({
+    delprov: 2,
+    area: "road_signs",
+    type: "sign",
+    sv: "Vad innebär ett åttkantigt rött märke med texten STOP?",
+    fr: "Que signifie un panneau octogonal rouge marqué STOP ?",
+    options: [
+      "Stopplikt – du måste stanna helt innan du kör vidare",
+      "Du får sakta ner men behöver inte stanna",
+      "Endast bussar måste stanna",
+      "Parkering tillåten",
+    ],
+    correct: 0,
+    explain:
+      "Märket anger stopplikt: du måste stanna helt vid stopplinjen (eller " +
+      "innan korsningen) och får köra vidare först när det är fritt.",
+    terms: ["stopplikt", "stopplinje"],
+  }),
 ];
 
 export const QUESTIONS_BY_DELPROV = (d: 1 | 2): MockQuestion[] =>
