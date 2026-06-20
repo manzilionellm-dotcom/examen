@@ -8,9 +8,26 @@ import { useProgress } from "@/lib/store/progressStore";
 import { Card, Meter, VerifyBadge } from "@/app/components/ui";
 import type { Delprov, MockAttempt } from "@/lib/domain/types";
 
-export function MockRunner({ delprov, short }: { delprov: Delprov; short: boolean }) {
+// Outer component: reads the `mode` query param on the client (so the page can
+// be statically exported — no server-side searchParams) and builds the mock
+// once before handing off to the interactive runner.
+export function MockRunner({ delprov }: { delprov: Delprov }) {
+  const [mock, setMock] = useState<MockExam | null>(null);
+
+  useEffect(() => {
+    const short = new URLSearchParams(window.location.search).get("mode") === "short";
+    // Build the mock on the client after reading the query param (keeps the
+    // page statically exportable). Intentional setState in effect.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMock(buildMock(delprov, { full: !short }));
+  }, [delprov]);
+
+  if (!mock) return <p className="text-slate-500">Chargement…</p>;
+  return <RunnerInner mock={mock} delprov={delprov} />;
+}
+
+function RunnerInner({ mock, delprov }: { mock: MockExam; delprov: Delprov }) {
   const { state, recordAttempt, reviewItem, updateProfile } = useProgress();
-  const [mock] = useState<MockExam>(() => buildMock(delprov, { full: !short }));
   const [startedAt] = useState(() => new Date().toISOString());
   const [answers, setAnswers] = useState<Record<string, number | undefined>>({});
   const [idx, setIdx] = useState(0);

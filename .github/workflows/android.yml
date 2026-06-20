@@ -1,0 +1,78 @@
+name: Build Android APK
+
+# Builds the TaxiSvenska Français APK from the static Next.js export wrapped with
+# Capacitor. Runs on GitHub-hosted runners (which can reach Google's SDK/Maven),
+# uploads the APK as a build artifact, and publishes it to a GitHub Release so it
+# can be downloaded directly.
+
+on:
+  push:
+    branches: ["claude/taxisvenska-android-mvp-ut91cq"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export (out/)
+        run: npm run build
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install required SDK packages
+        run: sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
+
+      - name: Generate Android project & sync web assets
+        run: |
+          npx cap add android
+          npx cap sync android
+
+      - name: Build debug APK
+        run: |
+          cd android
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Rename APK
+        run: |
+          mkdir -p dist
+          cp android/app/build/outputs/apk/debug/app-debug.apk \
+             "dist/TaxiSvenska-Francais-debug-${{ github.run_number }}.apk"
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: taxisvenska-debug-apk
+          path: dist/*.apk
+          if-no-files-found: error
+
+      - name: Publish to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk-build-${{ github.run_number }}
+          name: TaxiSvenska Français — APK build ${{ github.run_number }}
+          body: |
+            APK de débogage (non signé pour la production) généré automatiquement.
+            Préparation **non officielle** — voir le disclaimer dans l'application.
+          files: dist/*.apk

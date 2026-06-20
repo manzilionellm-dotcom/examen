@@ -17,6 +17,10 @@
 /.next/
 /out/
 
+# capacitor (android project is generated in CI from the static export)
+/android/
+/ios/
+
 # production
 /build
 
