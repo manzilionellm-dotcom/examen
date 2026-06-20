@@ -105,6 +105,7 @@ export default function Home() {
         <h2 className="font-semibold mb-2">Entraîneurs</h2>
         <div className="grid grid-cols-2 gap-3">
           <TileLink href="/exam" emoji="📝" title="Hub examen" desc="Domaines, théorie, examens blancs" />
+          <TileLink href="/lexique" emoji="📚" title="Lexique" desc="Tout le vocabulaire suédois de l'examen" />
           <TileLink href="/signs" emoji="🚸" title="Panneaux" desc="Reconnaissance + révision espacée" />
           <TileLink href="/calc" emoji="🧮" title="Taximètre" desc="Calculs de prix et de monnaie" />
           <TileLink href="/phrases" emoji="💬" title="Phrases" desc="Suédois fonctionnel du taxi" />

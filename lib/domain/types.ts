@@ -80,6 +80,16 @@ export interface RoadSign {
   category: string;
 }
 
+/** A single exam-vocabulary entry. All entries live in ONE consolidated
+ * glossary: the Swedish term tested in the exam + its French translation, with
+ * a short domain tag used only for optional filtering. */
+export interface ExamTerm {
+  id: string;
+  swedish: string;
+  french: string;
+  domain: string;
+}
+
 export interface CalculationProblem {
   id: string;
   template: string;
